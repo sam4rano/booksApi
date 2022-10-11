@@ -16,20 +16,20 @@ const Favorite = () => {
     <div className="favorite">
       {favorites.length > 0 ? (
         favorites.map((book) => (
-          <div key={book.id} className="book">
+          <div key={book.id} className="flex flex-col justify-center items-center m-sm text-center">
             <div>
               <h4>{book.title}</h4>
             </div>
             <div>
-              <img src={book.image_url} alt="#" />
+              <img className="w-[300px] h-[300px] transition ease-in-out hover:-translate-y-1 hover:scale-110 hover: duration-300" src={book.image_url} alt="#" />
             </div>
             <div>
               {favoritesChecker(book.id) ? (
-                <button onClick={() => removeFromFavorites(book.id)}>
+                <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-black text-white rounded-lg' onClick={() => removeFromFavorites(book.id)}>
                   Remove from Favorites
                 </button>
               ) : (
-                <button onClick={() => addToFavorites(book)}>
+                <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-black text-white rounded-lg' onClick={() => addToFavorites(book)}>
                   Add to Favorites
                 </button>
               )}
