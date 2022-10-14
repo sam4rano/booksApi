@@ -21,7 +21,7 @@ const Favorite = () => {
               <h4 className="font-bold pb-md">{book.title}</h4>
             </div>
             <div>
-              <img className="w-[300px] h-[300px] transition ease-in-out hover:-translate-y-1 hover:scale-110 hover: duration-300" src={book.image_url} alt="#" />
+              <img className="w-[300px] h-[300px] transition ease-in-out hover:-translate-y-1 hover:scale-110 hover: duration-300 rounded-lg" src={book.image_url} alt="#" />
             </div>
             <div>
               {favoritesChecker(book.id) ? (
