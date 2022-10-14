@@ -27,14 +27,14 @@ const Booklist = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className="min-h-[80vh] w-full grid grid-cols-3 justify-items-center text-center">
+    <div className="min-h-[80vh] w-full grid lg:grid-cols-3 justify-items-center text-center sm:grid-cols-1 md:grid-cols-2">
       {books.map((book) => (
         <div key={book.id} className="flex p-[20px] flex-col justify-center items-center m-sm text-center">
           <div>
-            <h4 className="text-lg font-medium p-[20px]">{book.title}</h4>
+            <h4 className="text-lg font-medium p-[20px] sm:font-normal">{book.title}</h4>
           </div>
           <div>
-            <img className="w-[300px] h-[300px] transition ease-in-out hover:-translate-y-1 hover:scale-110 hover: duration-300"
+            <img className="w-[300px] h-[300px] transition ease-in-out hover:-translate-y-1 hover:scale-110 hover: duration-300 md:w-[240px] md:h-[240px]"
               src={book.image_url}
               alt="#"
               onClick={() => navigate(`/books/${book.id}`)}
@@ -42,11 +42,11 @@ const Booklist = () => {
           </div>
           <div>
             {favoritesChecker(book.id) ? (
-              <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-black text-white rounded-lg' onClick={() => removeFromFavorites(book.id)}>
+              <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-[#a67c00] text-white rounded-lg md:w-[240px]' onClick={() => removeFromFavorites(book.id)}>
                 Remove from Favorites
               </button>
             ) : (
-              <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-black text-white rounded-lg' onClick={() => addToFavorites(book)}>
+              <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-[#a67c00] text-white rounded-lg md:w-[240px]' onClick={() => addToFavorites(book)}>
                 Add to Favorites
               </button>
             )}

@@ -25,11 +25,11 @@ const Favorite = () => {
             </div>
             <div>
               {favoritesChecker(book.id) ? (
-                <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-black text-white rounded-lg' onClick={() => removeFromFavorites(book.id)}>
+                <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-[#a67c00] text-white rounded-lg' onClick={() => removeFromFavorites(book.id)}>
                   Remove from Favorites
                 </button>
               ) : (
-                <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-black text-white rounded-lg' onClick={() => addToFavorites(book)}>
+                <button className='w-[300px] text-lg m-lg items-center p-[12px] bg-[#a67c00] text-white rounded-lg' onClick={() => addToFavorites(book)}>
                   Add to Favorites
                 </button>
               )}
@@ -37,7 +37,7 @@ const Favorite = () => {
           </div>
         ))
       ) : (
-        <h1>You don't have any favorites yet</h1>
+        <h1 className="#">You don't have any favorites yet</h1>
       )}
     </div>
   );
