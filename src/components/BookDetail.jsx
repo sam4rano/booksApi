@@ -21,18 +21,18 @@ const BookDetail = () => {
   }, [id]);
 
   return (
-    <div className="bookdetails">
-      <div>
-        <h2>{book?.title}</h2>
-        <img src={book?.image_url} alt="#" />
+    <div className="flex justify-evenly p-md min-h-[80vh]">
+      <div className="text-center p-md">
+        <h2 className='text-xl p-md font-bold'>{book?.title}</h2>
+        <img src={book?.image_url} alt="#" className="w-[300px] h-[300px] transition ease-in-out hover:-translate-y-1 hover:scale-110 hover: duration-300"/>
       </div>
-      <div>
-        <h2>Description</h2>
-        <p>{book?.description}</p>
-        <h2>Authors</h2>
-        <p>{book?.authors}</p>
-        <h2>Genres</h2>
-        <p>{book?.genres}</p>
+      <div className='flex flex-wrap p-md w-[600px]'>
+        <h2 className='font-bold'>Description</h2>
+        <p >{book?.description}</p>
+        <h2 className='font-semibold'>Authors</h2>
+        <p className='font-semibold pl-[10px]'>{book?.authors}</p>
+        <h2 className='font-semibold pl-[10px]'>Genres</h2>
+        <p className='font-semibold'>{book?.genres}</p>
       </div>
     </div>
   );

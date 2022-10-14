@@ -13,12 +13,12 @@ const Favorite = () => {
   };
 
   return (
-    <div className="favorite">
+    <div className="w-full min-h-[80vh] grid grid-cols-3 text-center justify-center">
       {favorites.length > 0 ? (
         favorites.map((book) => (
           <div key={book.id} className="flex flex-col justify-center items-center m-sm text-center">
             <div>
-              <h4>{book.title}</h4>
+              <h4 className="font-bold pb-md">{book.title}</h4>
             </div>
             <div>
               <img className="w-[300px] h-[300px] transition ease-in-out hover:-translate-y-1 hover:scale-110 hover: duration-300" src={book.image_url} alt="#" />

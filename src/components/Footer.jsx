@@ -3,7 +3,7 @@ import "../App"
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <div className='w-full h-[10vh] pt-[20px] flex bg-black text-white items-center justify-center'>
       <p>Books App &copy;2022</p>
     </div>
   );

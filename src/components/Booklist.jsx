@@ -27,11 +27,11 @@ const Booklist = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className="booklist">
+    <div className="min-h-[80vh] w-full grid grid-cols-3 justify-items-center text-center">
       {books.map((book) => (
-        <div key={book.id} className="flex flex-col justify-center items-center m-sm text-center">
+        <div key={book.id} className="flex p-[20px] flex-col justify-center items-center m-sm text-center">
           <div>
-            <h4>{book.title}</h4>
+            <h4 className="text-lg font-medium p-[20px]">{book.title}</h4>
           </div>
           <div>
             <img className="w-[300px] h-[300px] transition ease-in-out hover:-translate-y-1 hover:scale-110 hover: duration-300"
